@@ -16,31 +16,34 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-dark bg-dark shadow">
+<nav class="navbar navbar-light bg-white border-bottom">
   <div class="container">
-    <span class="navbar-brand fw-bold">🚀 Janaína Duarte</span>
+    <span class="navbar-brand fw-semibold">Janaína Duarte</span>
   </div>
 </nav>
 
 <!-- HEADER -->
-<header class="text-center text-white p-5 header-gradient">
+<header class="text-center py-5 bg-light">
   <h1 class="fw-bold">Janaína Duarte</h1>
 
-  <p class="lead">
-    Mestranda em Modelagem Matemática – CEFET-MG <br>
+  <p class="text-muted mb-1">
+    Mestranda em Modelagem Matemática – CEFET-MG
+  </p>
+
+  <p class="text-muted">
     Data Scientist – USP
   </p>
 
-  <p>
-    Engenharia de Dados • Data Science • Transporte Público • OD • Bilhetagem
+  <p class="mt-3">
+    Engenharia de Dados · Data Science · Transporte Público · OD
   </p>
 </header>
 
 <!-- FORMAÇÃO -->
-<section class="container my-5">
-  <h2>🎓 Formação</h2>
+<section class="container py-5">
+  <h3 class="section-title">Formação</h3>
 
-  <ul class="list-group shadow-sm">
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">
       Mestrado em Modelagem Matemática – CEFET-MG (em andamento)
     </li>
@@ -51,102 +54,62 @@
 </section>
 
 <!-- PROJETOS -->
-<section class="container my-5">
-  <h2 class="mb-4">🚀 Projetos</h2>
+<section class="container py-5">
+  <h3 class="section-title">Projetos</h3>
 
-  <!-- PROJETO 1 -->
-  <div class="card mb-5 shadow-lg">
+  <div class="card mb-4 border-0 shadow-sm">
     <div class="card-body">
-      <h4>📍 Origem e Destino do Transporte Coletivo</h4>
+      <h5 class="fw-semibold">Origem e Destino do Transporte Coletivo</h5>
 
-      <ul>
-        <li>Algoritmo para análise de OD com dados de bilhetagem eletrônica e GPS</li>
-        <li>Liderança técnica no desenvolvimento</li>
-        <li><b>Tecnologia:</b> Python</li>
-      </ul>
+      <p class="text-muted">
+        Desenvolvimento de algoritmo para inferência de matriz OD com dados de bilhetagem eletrônica e GPS.
+      </p>
 
-      <!-- IMAGENS -->
-      <div class="row text-center">
-        <div class="col-md-6">
-          <img src="imagens/mapa1.png" class="img-fluid rounded shadow">
-          <small class="text-muted">Distribuição espacial OD</small>
-        </div>
-        <div class="col-md-6">
-          <img src="imagens/mapa2.png" class="img-fluid rounded shadow">
-          <small class="text-muted">Análise de padrões de viagem</small>
-        </div>
-      </div>
-    </div>
-  </div>
+      <p><b>Tecnologia:</b> Python</p>
 
-  <!-- PROJETO 2 -->
-  <div class="card mb-5 shadow-lg">
-    <div class="card-body">
-      <h4>📊 Análise de Demanda - Região Noroeste de Belo Horizonte</h4>
-
-      <ul>
-        <li>Artigo científico baseado no TCC</li>
-        <li>Clusterização e Teste V de Cramer</li>
-        <li><b>Tecnologias:</b> QGIS, Python, Excel</li>
-      </ul>
-
-      <a class="btn btn-primary mb-3" href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
-        🔗 Ver artigo completo
-      </a>
-
-      <!-- SE TIVER 1 IMAGEM SÓ -->
-      <div class="text-center">
-        <img src="imagens/artigo1.png" class="img-fluid rounded shadow">
-        <small class="text-muted d-block">Resultados da análise de demanda</small>
-      </div>
-
-      <!-- SE TIVER 2 IMAGENS, USE ISSO:
       <div class="row">
         <div class="col-md-6">
-          <img src="imagens/artigo1.png" class="img-fluid rounded shadow">
+          <img src="imagens/mapa1.png" class="img-fluid rounded">
         </div>
         <div class="col-md-6">
-          <img src="imagens/grafico.png" class="img-fluid rounded shadow">
+          <img src="imagens/mapa2.png" class="img-fluid rounded">
         </div>
       </div>
-      -->
-
     </div>
   </div>
 
-</section>
+  <div class="card mb-4 border-0 shadow-sm">
+    <div class="card-body">
+      <h5 class="fw-semibold">Análise de Demanda – Região Noroeste de Belo Horizonte</h5>
 
-<!-- PUBLICAÇÕES -->
-<section class="bg-light p-5">
-  <div class="container">
-    <h2>📚 Publicações</h2>
+      <p class="text-muted">
+        Estudo baseado em técnicas de clusterização e análise estatística para avaliação da demanda no transporte público.
+      </p>
 
-    <p>
-      <b>Medium:</b>
-      <a href="https://medium.com/@janainacduarte" target="_blank">
-        Como Calcular a Velocidade Média de Ônibus
+      <p><b>Tecnologias:</b> QGIS, Python, Excel</p>
+
+      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank" class="btn btn-outline-dark btn-sm">
+        Ver artigo
       </a>
-    </p>
 
-    <p>
-      <b>Artigo ANPET:</b>
-      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
-        Critérios de demanda no transporte público
-      </a>
-    </p>
+      <div class="text-center mt-3">
+        <img src="imagens/artigo1.png" class="img-fluid rounded">
+      </div>
+    </div>
   </div>
+
 </section>
 
 <!-- EXPERIÊNCIA -->
-<section class="container my-5">
-  <h2>📊 Experiência</h2>
+<section class="container py-5">
+  <h3 class="section-title">Experiência</h3>
 
-  <ul class="list-group shadow-sm">
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">
-      Apuração do Subsídio do Transporte – 52 quinzenas (SUMOB-BH)
+      Apuração do Subsídio do Transporte – 52 ciclos quinzenais (SUMOB-BH)
     </li>
     <li class="list-group-item">
-      Desenvolvimento de Matriz O/D (Python)
+      Desenvolvimento de Matriz Origem-Destino (Python)
     </li>
     <li class="list-group-item">
       Engenharia de Dados – SQL, DBT, Google Cloud (atual)
@@ -158,8 +121,8 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3">
-  © 2026 - Janaína Duarte
+<footer class="text-center py-4 border-top text-muted">
+  Janaína Duarte · 2026
 </footer>
 
 </body>

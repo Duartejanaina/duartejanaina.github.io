@@ -16,21 +16,21 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-light bg-white border-bottom">
+<nav class="navbar navbar-dark bg-dark border-bottom">
   <div class="container">
     <span class="navbar-brand fw-semibold">Janaína Duarte</span>
   </div>
 </nav>
 
 <!-- HEADER -->
-<header class="text-center py-5 bg-light">
+<header class="text-center py-5 bg-dark text-light">
   <h1 class="fw-bold">Janaína Duarte</h1>
 
-  <p class="text-muted mb-1">
+  <p class="text-secondary mb-1">
     Mestranda em Modelagem Matemática – CEFET-MG
   </p>
 
-  <p class="text-muted">
+  <p class="text-secondary">
     Data Scientist – USP
   </p>
 
@@ -44,10 +44,10 @@
   <h3 class="section-title">Formação</h3>
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">
+    <li class="list-group-item bg-dark text-light border-secondary">
       Mestrado em Modelagem Matemática – CEFET-MG (em andamento)
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item bg-dark text-light border-secondary">
       Formação em Data Science – USP
     </li>
   </ul>
@@ -57,35 +57,33 @@
 <section class="container py-5">
   <h3 class="section-title">Projetos</h3>
 
-  <div class="card mb-4 border-0 shadow-sm">
+  <div class="card mb-4 bg-dark text-light border-0 shadow">
     <div class="card-body">
       <h5 class="fw-semibold">Origem e Destino do Transporte Coletivo</h5>
 
-      <p class="text-muted">
+      <p class="text-secondary">
         Desenvolvimento de algoritmo para inferência de matriz OD com dados de bilhetagem eletrônica e GPS.
       </p>
 
       <p><b>Tecnologia:</b> Python</p>
 
-      <div class="row">
-        <div class="col-md-6">
-          <img src="imagens/mapa.png" class="img-fluid rounded">
-        </div>
+      <div class="text-center">
+        <img src="imagens/mapa.png" class="img-fluid rounded">
       </div>
     </div>
   </div>
 
-  <div class="card mb-4 border-0 shadow-sm">
+  <div class="card mb-4 bg-dark text-light border-0 shadow">
     <div class="card-body">
       <h5 class="fw-semibold">Análise de Demanda – Região Noroeste de Belo Horizonte</h5>
 
-      <p class="text-muted">
-        Estudo baseado em técnicas de clusterização e análise estatística para avaliação da demanda no transporte público.
+      <p class="text-secondary">
+        Estudo com clusterização e análise estatística da demanda no transporte público.
       </p>
 
       <p><b>Tecnologias:</b> QGIS, Python, Excel</p>
 
-      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank" class="btn btn-outline-dark btn-sm">
+      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank" class="btn btn-outline-light btn-sm">
         Ver artigo
       </a>
 
@@ -97,30 +95,71 @@
 
 </section>
 
-<!-- PROJETOS -->
+<!-- EXPERIÊNCIA -->
 <section class="container py-5">
   <h3 class="section-title">Experiência</h3>
 
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      Apuração do Subsídio do Transporte – 52 ciclos quinzenais (SUMOB-BH)
-    </li>
-    <li class="list-group-item">
-      Desenvolvimento de Matriz Origem-Destino (Python)
-    </li>
-    <li class="list-group-item">
-      Engenharia de Dados – SQL, DBT, Google Cloud (atual)
-    </li>
-    <li class="list-group-item">
-      Docência em Python – 160 horas (COTEMIG)
-    </li>
-  </ul>
+  <div class="card bg-dark text-light border-0 shadow">
+    <div class="card-body">
+
+      <canvas id="graficoExperiencia"></canvas>
+
+      <div class="mt-4 small text-secondary">
+        <p>Apuração do Subsídio – 52 ciclos quinzenais (SUMOB-BH)</p>
+        <p>Matriz Origem-Destino – Python</p>
+        <p>Engenharia de Dados – SQL, DBT, Google Cloud</p>
+        <p>Docência em Python – 160h</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-4 border-top text-muted">
+<footer class="text-center py-4 border-top text-secondary">
   Janaína Duarte · 2026
 </footer>
+
+<!-- SCRIPTS (NO FINAL!) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const ctx = document.getElementById('graficoExperiencia');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Subsídio',
+        'Matriz OD',
+        'Eng. Dados',
+        'Docência'
+      ],
+      datasets: [{
+        label: 'Volume',
+        data: [52, 1, 1, 160],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          labels: { color: 'white' }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: 'white' }
+        },
+        y: {
+          ticks: { color: 'white' }
+        }
+      }
+    }
+  });
+});
+</script>
 
 </body>
 </html>

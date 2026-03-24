@@ -2,8 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Janaína Duarte | Portfólio</title>
-
+  <title>Janaína Duarte | Data Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap -->
@@ -11,157 +10,139 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-dark bg-dark border-bottom">
+<!-- NAV -->
+<nav class="navbar navbar-dark bg-black border-bottom border-secondary">
   <div class="container">
     <span class="navbar-brand fw-semibold">Janaína Duarte</span>
   </div>
 </nav>
 
-<!-- HEADER -->
-<header class="text-center py-5 bg-dark text-light">
-  <h1 class="fw-bold">Janaína Duarte</h1>
+<!-- HERO -->
+<section class="container py-5">
+  <h1 class="fw-bold">Data & Transport Analytics</h1>
 
   <p class="text-secondary mb-1">
-    Mestranda em Modelagem Matemática – CEFET-MG
+    Mestranda em Modelagem Matemática — CEFET-MG
   </p>
 
   <p class="text-secondary">
-    Data Scientist – USP
+    Data Scientist — USP
   </p>
 
-  <p class="mt-3">
-    Engenharia de Dados · Data Science · Pesquisadora · Professora
+  <p class="mt-3 text-light">
+    Engenharia de Dados · Data Science · Transporte Público · OD · Bilhetagem
   </p>
-</header>
+</section>
 
-<!-- FORMAÇÃO -->
-<section class="container py-5">
-  <h3 class="section-title">Formação</h3>
+<!-- KPIs -->
+<section class="container py-4">
+  <div class="row g-4">
 
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item bg-dark text-light border-secondary">
-      Mestrado em Modelagem Matemática – CEFET-MG (em andamento)
-    </li>
-    <li class="list-group-item bg-dark text-light border-secondary">
-      Formação em Data Science – USP
-    </li>
-  </ul>
+    <div class="col-md-3">
+      <div class="kpi-card">
+        <h2 class="counter" data-target="52">0</h2>
+        <p>Ciclos Quinzenais</p>
+        <span>Subsídio · SUMOB-BH</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="kpi-card">
+        <h2>OD</h2>
+        <p>Matriz Origem-Destino</p>
+        <span>Python</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="kpi-card">
+        <h2>SQL</h2>
+        <p>Engenharia de Dados</p>
+        <span>DBT · GCP</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="kpi-card">
+        <h2 class="counter" data-target="160">0</h2>
+        <p>Horas de Aula</p>
+        <span>Python · COTEMIG</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- PROJETOS -->
 <section class="container py-5">
-  <h3 class="section-title">Projetos</h3>
+  <h3 class="mb-4">Projetos</h3>
 
-  <div class="card mb-4 bg-dark text-light border-0 shadow">
-    <div class="card-body">
-      <h5 class="fw-semibold">Origem e Destino do Transporte Coletivo</h5>
-
-      <p class="text-secondary">
-        Desenvolvimento de algoritmo para inferência de matriz OD com dados de bilhetagem eletrônica e GPS.
-      </p>
-
-      <p><b>Tecnologia:</b> Python</p>
-
-      <div class="text-center">
-        <img src="imagens/mapa.png" class="img-fluid rounded">
-      </div>
-    </div>
+  <div class="project-card">
+    <h5>Inferência de Matriz OD</h5>
+    <p>
+      Algoritmo para reconstrução de trajetórias e inferência de origem-destino
+      a partir de bilhetagem eletrônica e GPS.
+    </p>
+    <span>Python · GeoPandas · Pandas</span>
   </div>
 
-  <div class="card mb-4 bg-dark text-light border-0 shadow">
-    <div class="card-body">
-      <h5 class="fw-semibold">Análise de Demanda – Região Noroeste de Belo Horizonte</h5>
-
-      <p class="text-secondary">
-        Estudo com clusterização e análise estatística da demanda no transporte público.
-      </p>
-
-      <p><b>Tecnologias:</b> QGIS, Python, Excel</p>
-
-      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank" class="btn btn-outline-light btn-sm">
-        Ver artigo
-      </a>
-
-      <div class="text-center mt-3">
-        <img src="imagens/artigo.png" class="img-fluid rounded">
-      </div>
-    </div>
+  <div class="project-card">
+    <h5>Análise de Demanda — BH</h5>
+    <p>
+      Clusterização e análise estatística aplicada ao transporte público urbano.
+    </p>
+    <span>QGIS · Python · Estatística</span>
   </div>
 
 </section>
 
-<!-- EXPERIÊNCIA -->
+<!-- PUBLICAÇÕES -->
 <section class="container py-5">
-  <h3 class="section-title">Experiência</h3>
+  <h3 class="mb-4">Publicações</h3>
 
-  <div class="card bg-dark text-light border-0 shadow">
-    <div class="card-body">
-
-      <canvas id="graficoExperiencia"></canvas>
-
-      <div class="mt-4 small text-secondary">
-        <p>Apuração do Subsídio – 52 ciclos quinzenais (SUMOB-BH)</p>
-        <p>Matriz Origem-Destino – Python</p>
-        <p>Engenharia de Dados – SQL, DBT, Google Cloud</p>
-        <p>Docência em Python</p>
-      </div>
-
-    </div>
+  <div class="project-card">
+    <p>Artigo ANPET — Critérios de demanda no transporte público</p>
+    <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
+      Ver publicação
+    </a>
   </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-4 border-top text-secondary">
+<footer class="text-center py-4 border-top border-secondary text-secondary">
   Janaína Duarte · 2026
 </footer>
-<section class="container py-5">
-  <h3 class="section-title">Experiência</h3>
 
-  <div class="row g-4">
+<!-- SCRIPT ANIMAÇÃO -->
+<script>
+const counters = document.querySelectorAll('.counter');
 
-    <!-- CARD 1 -->
-    <div class="col-md-3">
-      <div class="card bg-dark text-light border-0 shadow text-center p-4">
-        <h2 class="fw-bold">52</h2>
-        <p class="text-secondary mb-1">Ciclos Quinzenais</p>
-        <small class="text-secondary">Subsídio – SUMOB-BH</small>
-      </div>
-    </div>
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
 
-    <!-- CARD 2 -->
-    <div class="col-md-3">
-      <div class="card bg-dark text-light border-0 shadow text-center p-4">
-        <h2 class="fw-bold">OD</h2>
-        <p class="text-secondary mb-1">Matriz Origem-Destino</p>
-        <small class="text-secondary">Desenvolvimento em Python</small>
-      </div>
-    </div>
+    const increment = target / 50;
 
-    <!-- CARD 3 -->
-    <div class="col-md-3">
-      <div class="card bg-dark text-light border-0 shadow text-center p-4">
-        <h2 class="fw-bold">SQL</h2>
-        <p class="text-secondary mb-1">Engenharia de Dados</p>
-        <small class="text-secondary">SQL · DBT · Google Cloud</small>
-      </div>
-    </div>
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
 
-    <!-- CARD 4 -->
-    <div class="col-md-3">
-      <div class="card bg-dark text-light border-0 shadow text-center p-4">
-        <h2 class="fw-bold">160h</h2>
-        <p class="text-secondary mb-1">Docência em Python</p>
-        <small class="text-secondary">COTEMIG</small>
-      </div>
-    </div>
-
-  </div>
-</section>
+  update();
+});
+</script>
 
 </body>
 </html>

@@ -16,7 +16,7 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark shadow">
   <div class="container">
     <span class="navbar-brand fw-bold">🚀 Janaína Duarte</span>
   </div>
@@ -40,7 +40,7 @@
 <section class="container my-5">
   <h2>🎓 Formação</h2>
 
-  <ul class="list-group">
+  <ul class="list-group shadow-sm">
     <li class="list-group-item">
       Mestrado em Modelagem Matemática – CEFET-MG (em andamento)
     </li>
@@ -55,31 +55,34 @@
   <h2 class="mb-4">🚀 Projetos</h2>
 
   <!-- PROJETO 1 -->
-  <div class="card mb-4 shadow">
+  <div class="card mb-5 shadow-lg">
     <div class="card-body">
-      <h4>Origem e Destino do Transporte Coletivo</h4>
+      <h4>📍 Origem e Destino do Transporte Coletivo</h4>
 
       <ul>
         <li>Algoritmo para análise de OD com dados de bilhetagem eletrônica e GPS</li>
-        <li>Líder de projeto e co-desenvolvedora</li>
+        <li>Liderança técnica no desenvolvimento</li>
         <li><b>Tecnologia:</b> Python</li>
       </ul>
 
-      <div class="row">
+      <!-- IMAGENS -->
+      <div class="row text-center">
         <div class="col-md-6">
-          <img src="imagens/mapa1.png" class="img-fluid rounded">
+          <img src="imagens/mapa1.png" class="img-fluid rounded shadow">
+          <small class="text-muted">Distribuição espacial OD</small>
         </div>
         <div class="col-md-6">
-          <img src="imagens/mapa2.png" class="img-fluid rounded">
+          <img src="imagens/mapa2.png" class="img-fluid rounded shadow">
+          <small class="text-muted">Análise de padrões de viagem</small>
         </div>
       </div>
     </div>
   </div>
 
   <!-- PROJETO 2 -->
-  <div class="card mb-4 shadow">
+  <div class="card mb-5 shadow-lg">
     <div class="card-body">
-      <h4>Análise de Demanda - Região Noroeste de Belo Horizonte</h4>
+      <h4>📊 Análise de Demanda - Região Noroeste de Belo Horizonte</h4>
 
       <ul>
         <li>Artigo científico baseado no TCC</li>
@@ -87,18 +90,27 @@
         <li><b>Tecnologias:</b> QGIS, Python, Excel</li>
       </ul>
 
-      <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
+      <a class="btn btn-primary mb-3" href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
         🔗 Ver artigo completo
       </a>
 
-      <div class="row mt-3">
+      <!-- SE TIVER 1 IMAGEM SÓ -->
+      <div class="text-center">
+        <img src="imagens/artigo1.png" class="img-fluid rounded shadow">
+        <small class="text-muted d-block">Resultados da análise de demanda</small>
+      </div>
+
+      <!-- SE TIVER 2 IMAGENS, USE ISSO:
+      <div class="row">
         <div class="col-md-6">
-          <img src="imagens/artigo1.png" class="img-fluid rounded">
+          <img src="imagens/artigo1.png" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-6">
-          <img src="imagens/grafico.png" class="img-fluid rounded">
+          <img src="imagens/grafico.png" class="img-fluid rounded shadow">
         </div>
       </div>
+      -->
+
     </div>
   </div>
 
@@ -129,7 +141,7 @@
 <section class="container my-5">
   <h2>📊 Experiência</h2>
 
-  <ul class="list-group">
+  <ul class="list-group shadow-sm">
     <li class="list-group-item">
       Apuração do Subsídio do Transporte – 52 quinzenas (SUMOB-BH)
     </li>

@@ -119,47 +119,49 @@
 <footer class="text-center py-4 border-top text-secondary">
   Janaína Duarte · 2026
 </footer>
+<section class="container py-5">
+  <h3 class="section-title">Experiência</h3>
 
-<!-- SCRIPTS (NO FINAL!) -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div class="row g-4">
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const ctx = document.getElementById('graficoExperiencia');
+    <!-- CARD 1 -->
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow text-center p-4">
+        <h2 class="fw-bold">52</h2>
+        <p class="text-secondary mb-1">Ciclos Quinzenais</p>
+        <small class="text-secondary">Subsídio – SUMOB-BH</small>
+      </div>
+    </div>
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [
-        'Subsídio',
-        'Matriz OD',
-        'Eng. Dados',
-        'Docência'
-      ],
-      datasets: [{
-        label: 'Volume',
-        data: [52, 1, 1, 160],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          labels: { color: 'white' }
-        }
-      },
-      scales: {
-        x: {
-          ticks: { color: 'white' }
-        },
-        y: {
-          ticks: { color: 'white' }
-        }
-      }
-    }
-  });
-});
-</script>
+    <!-- CARD 2 -->
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow text-center p-4">
+        <h2 class="fw-bold">OD</h2>
+        <p class="text-secondary mb-1">Matriz Origem-Destino</p>
+        <small class="text-secondary">Desenvolvimento em Python</small>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow text-center p-4">
+        <h2 class="fw-bold">SQL</h2>
+        <p class="text-secondary mb-1">Engenharia de Dados</p>
+        <small class="text-secondary">DBT · Google Cloud</small>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="col-md-3">
+      <div class="card bg-dark text-light border-0 shadow text-center p-4">
+        <h2 class="fw-bold">160h</h2>
+        <p class="text-secondary mb-1">Docência em Python</p>
+        <small class="text-secondary">COTEMIG</small>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>

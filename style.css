@@ -1,24 +1,60 @@
 body {
-    background-color: #0d1117;
-    color: #c9d1d9;
-    font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'Inter', sans-serif;
 }
 
-.section-title {
-    color: #58a6ff;
-    font-weight: 600;
-    margin-bottom: 20px;
+h1, h2, h3 {
+  color: #ffffff;
 }
 
-.card {
-    border-radius: 10px;
+.navbar {
+  background-color: #0d1117 !important;
 }
 
-img {
-    margin-top: 10px;
-    border: 1px solid #30363d;
+.kpi-card {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #30363d;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+  border-color: #58a6ff;
+}
+
+.kpi-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.kpi-card p {
+  margin: 0;
+  color: #c9d1d9;
+}
+
+.kpi-card span {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.project-card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #30363d;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  border-color: #58a6ff;
 }
 
 a {
-    color: #58a6ff;
+  color: #58a6ff;
+  text-decoration: none;
 }

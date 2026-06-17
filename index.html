@@ -1,148 +1,375 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Janaína Duarte | Data Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Janaína Duarte — Especialista em dados, engenharia de dados, modelagem estatística e transporte público.">
+  <title>Janaína Duarte | Data & Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <canvas id="grid-canvas" aria-hidden="true"></canvas>
 
-<!-- NAV -->
-<nav class="navbar navbar-dark bg-black border-bottom border-secondary">
-  <div class="container">
-    <span class="navbar-brand fw-semibold">Janaína Duarte</span>
-  </div>
-</nav>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-bracket">&lt;</span>JD<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#metricas">Métricas</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#publicacoes">Publicações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
-<!-- HERO -->
-<section class="container py-5">
-  <h1 class="fw-bold">Data & Transport Analytics</h1>
-
-  <p class="text-secondary mb-1">
-    Mestranda em Modelagem Matemática — CEFET-MG
-  </p>
-
-  <p class="text-secondary">
-    Data Scientist — USP
-  </p>
-
-  <p class="mt-3 text-light">
-    Engenharia de Dados · Data Science · Transporte Público · OD · Bilhetagem
-  </p>
-</section>
-
-<!-- KPIs -->
-<section class="container py-4">
-  <div class="row g-4">
-
-    <div class="col-md-3">
-      <div class="kpi-card">
-        <h2 class="counter" data-target="52">0</h2>
-        <p>Ciclos Quinzenais</p>
-        <span>Subsídio · SUMOB-BH</span>
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        disponível para projetos de dados
       </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="kpi-card">
-        <h2>OD</h2>
-        <p>Matriz Origem-Destino</p>
-        <span>Python</span>
+      <h1>
+        Transformo <span class="gradient-text">dados brutos</span><br>
+        em algoritmos e automação para impulsionar resultados
+      </h1>
+      <p class="hero-sub">
+        Engenharia de Dados · Data Science · Análise espacial · Transporte público
+      </p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">formação</span>
+          <span class="meta-value">Mestranda — CEFET-MG</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">especialização</span>
+          <span class="meta-value">Data Scientist — USP</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">foco</span>
+          <span class="meta-value">Dados geoespaciais · Modelagem · Engenharia de dados</span>
+        </div>
       </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="kpi-card">
-        <h2>SQL</h2>
-        <p>Engenharia de Dados</p>
-        <span>DBT · GCP</span>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="https://github.com/Duartejanaina" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
-    </div>
+      <div class="terminal" role="presentation">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <code>pipeline_od.py</code>
+        </div>
+        <pre class="terminal-body"><code><span class="t-comment"># reconstrução de trajetórias a partir de bilhetagem</span>
+<span class="t-key">import</span> pandas <span class="t-key">as</span> pd
+<span class="t-key">from</span> geopandas <span class="t-key">import</span> GeoDataFrame
 
-    <div class="col-md-3">
-      <div class="kpi-card">
-        <h2 class="counter" data-target="160">0</h2>
-        <p>Horas de Aula</p>
-        <span>Python · COTEMIG</span>
+od_matrix = infer_od(gps_events, fare_transactions)
+print(f<span class="t-str">"pares OD: {len(od_matrix):,}"</span>)
+<span class="t-out">→ pares OD: 2,847,391</span>
+<span class="t-out">→ hexágonos H3: 3,049</span>
+<span class="t-cursor">_</span></code></pre>
       </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section container">
+      <div class="section-header">
+        <span class="section-tag">01 — sobre</span>
+        <h2>Dados com contexto de mobilidade urbana</h2>
+      </div>
+      <div class="about-grid">
+        <p>
+          Sou <strong>especialista em dados</strong> com experiência em
+          <strong>engenharia de dados</strong>, <strong>modelagem estatística</strong> e
+          aplicações na área de <strong>transporte público</strong>. Trabalho com bilhetagem
+          eletrônica, matrizes origem–destino (OD), pipelines em nuvem e análise espacial em
+          malhas hexagonais H3.
+        </p>
+        <p>
+          Atuo na interface entre tecnologia e política pública: da apuração operacional
+          (pontualidade, extensão, subsídio) à avaliação de impacto de políticas tarifárias
+          com modelos econométricos e índices de acessibilidade.
+        </p>
+      </div>
+    </section>
+
+    <!-- Métricas -->
+    <section id="metricas" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 — métricas</span>
+          <h2>Números que contam a história</h2>
+        </div>
+        <div class="metrics-grid">
+          <article class="metric-card">
+            <div class="metric-chart" data-values="42,48,51,49,52,55,52"></div>
+            <span class="metric-value counter" data-target="52">0</span>
+            <span class="metric-unit">ciclos</span>
+            <p class="metric-label">Apuração de subsídio — SUMOB-BH</p>
+          </article>
+          <article class="metric-card highlight">
+            <div class="metric-chart" data-values="18,32,48,64,82,98,116"></div>
+            <span class="metric-value counter" data-target="116">0</span>
+            <span class="metric-unit">PRs</span>
+            <p class="metric-label">Implementações, correções e melhorias entregues</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-chart" data-values="30,45,60,75,90,105,120"></div>
+            <div class="metric-combo">
+              <div class="metric-combo-item">
+                <span class="metric-value counter" data-target="120">0</span>
+                <span class="metric-unit">horas</span>
+              </div>
+              <span class="metric-combo-sep">·</span>
+              <div class="metric-combo-item">
+                <span class="metric-value">250+</span>
+                <span class="metric-unit">alunos</span>
+              </div>
+            </div>
+            <p class="metric-label">Professora de Python</p>
+          </article>
+          <article class="metric-card highlight">
+            <div class="metric-chart" data-values="1200,2400,3600,4800,6000,7200,8064"></div>
+            <span class="metric-value counter" data-target="8064" data-suffix="+">0</span>
+            <span class="metric-unit">horas</span>
+            <p class="metric-label">Análise de dados, modelagem e desenvolvimento de soluções algorítmicas</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-chart" data-values="4,8,12,16,18,19,20"></div>
+            <span class="metric-value counter" data-target="20">0</span>
+            <span class="metric-unit">anos</span>
+            <p class="metric-label">Como analista de dados</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="section container">
+      <div class="section-header">
+        <span class="section-tag">03 — stack</span>
+        <h2>Ferramentas e tecnologias</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3>Linguagens &amp; análise</h3>
+          <ul class="tech-list">
+            <li><span class="tech-dot python"></span>Python</li>
+            <li><span class="tech-dot sql"></span>SQL</li>
+            <li><span class="tech-dot r"></span>R</li>
+            <li><span class="tech-dot pyspark"></span>PySpark</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Dados &amp; nuvem</h3>
+          <ul class="tech-list">
+            <li><span class="tech-dot gcp"></span>Google Cloud Platform</li>
+            <li><span class="tech-dot dbt"></span>dbt</li>
+            <li><span class="tech-dot snow"></span>Snowflake</li>
+            <li><span class="tech-dot pandas"></span>Pandas · NumPy</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Geo &amp; modelagem</h3>
+          <ul class="tech-list">
+            <li><span class="tech-dot geo"></span>GeoPandas · H3</li>
+            <li><span class="tech-dot qgis"></span>QGIS</li>
+            <li><span class="tech-dot stats"></span>Statsmodels · SciPy</li>
+            <li><span class="tech-dot viz"></span>Matplotlib · Seaborn</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Engenharia</h3>
+          <ul class="tech-list">
+            <li><span class="tech-dot git"></span>Git · GitHub</li>
+            <li><span class="tech-dot stream"></span>Streamlit</li>
+            <li><span class="tech-dot docker"></span>Docker</li>
+            <li><span class="tech-dot api"></span>APIs · ETL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 — projetos</span>
+          <h2>Repositórios e pipelines</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">pesquisa · geo</span>
+              <span class="project-status private">privado</span>
+            </div>
+            <h3>Acessibilidade e lazer — Tarifa zero</h3>
+            <p>
+              Avaliação do impacto da tarifa zero domingal em BH com análise OD em malha H3,
+              índices de Hansen e modelos Poisson / binomial negativa.
+            </p>
+            <div class="project-tags">
+              <span>H3</span><span>GeoPandas</span><span>GLM</span><span>ANPET 2026</span>
+            </div>
+            <a href="https://github.com/Duartejanaina/acessibilidade-lazer" target="_blank" rel="noopener" class="project-link">
+              Ver repositório →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">dados · transporte</span>
+              <span class="project-status private">privado</span>
+            </div>
+            <h3>Inferência de Matriz OD</h3>
+            <p>
+              Algoritmo para reconstrução de trajetórias e inferência de origem–destino
+              a partir de bilhetagem eletrônica e eventos GPS.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Pandas</span><span>OD</span><span>Bilhetagem</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">ml · série temporal</span>
+              <span class="project-status public">público</span>
+            </div>
+            <h3>Modelo SARIMA</h3>
+            <p>
+              Análise preditiva com modelos de séries temporais para demanda e indicadores operacionais.
+            </p>
+            <div class="project-tags">
+              <span>SARIMA</span><span>Forecast</span><span>Python</span>
+            </div>
+            <a href="https://github.com/Duartejanaina/SARIMA" target="_blank" rel="noopener" class="project-link">
+              Ver repositório →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">pesquisa</span>
+              <span class="project-status public">público</span>
+            </div>
+            <h3>ANPET 2025 — Critérios de demanda</h3>
+            <p>
+              Investigação dos critérios de demanda no transporte público: estudo de caso
+              com dados reais de operação urbana.
+            </p>
+            <div class="project-tags">
+              <span>Estatística</span><span>Demanda</span><span>BH</span>
+            </div>
+            <a href="https://github.com/Duartejanaina/anpet2025" target="_blank" rel="noopener" class="project-link">
+              Ver repositório →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">automação</span>
+              <span class="project-status public">público</span>
+            </div>
+            <h3>Automação de relatórios PDF</h3>
+            <p>
+              Pipeline para geração e envio automatizado de relatórios operacionais em PDF com FPDF.
+            </p>
+            <div class="project-tags">
+              <span>FPDF</span><span>Python</span><span>Automação</span>
+            </div>
+            <a href="https://github.com/Duartejanaina/AutomatizacaoPDF" target="_blank" rel="noopener" class="project-link">
+              Ver repositório →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">operação · diagnóstico</span>
+              <span class="project-status private">privado</span>
+            </div>
+            <h3>Diagnóstico operacional — DINART</h3>
+            <p>
+              Algoritmos para diagnóstico da operação de transporte: pontualidade, velocidade média e extensão.
+            </p>
+            <div class="project-tags">
+              <span>KPIs</span><span>Operação</span><span>SQL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publicações -->
+    <section id="publicacoes" class="section container">
+      <div class="section-header">
+        <span class="section-tag">05 — publicações</span>
+        <h2>Artigos e congressos</h2>
+      </div>
+      <div class="pub-list">
+        <article class="pub-item">
+          <span class="pub-year">2024</span>
+          <div>
+            <h3>Investigação dos critérios de demanda no transporte público</h3>
+            <p class="pub-venue">ANPET — Congresso Nacional de Pesquisa e Ensino em Transportes</p>
+            <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank" rel="noopener">
+              Ver no proceedings →
+            </a>
+          </div>
+        </article>
+        <article class="pub-item">
+          <span class="pub-year">2026</span>
+          <div>
+            <h3>Acessibilidade e lazer: tarifa zero domingal em Belo Horizonte</h3>
+            <p class="pub-venue">ANPET 2026 — em submissão / artigo em desenvolvimento</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section section-alt">
+      <div class="container contact-block">
+        <div class="section-header">
+          <span class="section-tag">06 — contato</span>
+          <h2>Vamos construir algo com dados?</h2>
+        </div>
+        <p class="contact-text">
+          Aberta a colaborações em projetos de mobilidade urbana, engenharia de dados e pesquisa aplicada.
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/Duartejanaina" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">GH</span>
+            <span>GitHub</span>
+            <small>@Duartejanaina</small>
+          </a>
+          <a href="mailto:janainacduarte@gmail.com" class="contact-card">
+            <span class="contact-icon">@</span>
+            <span>E-mail</span>
+            <small>janainacduarte@gmail.com</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Janaína Duarte · 2026</span>
+      <span class="footer-tech">Python · SQL · Geo · Data</span>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<!-- PROJETOS -->
-<section class="container py-5">
-  <h3 class="mb-4">Projetos</h3>
-
-  <div class="project-card">
-    <h5>Inferência de Matriz OD</h5>
-    <p>
-      Algoritmo para reconstrução de trajetórias e inferência de origem-destino
-      a partir de bilhetagem eletrônica e GPS.
-    </p>
-    <span>Python · GeoPandas · Pandas</span>
-  </div>
-
-  <div class="project-card">
-    <h5>Análise de Demanda — BH</h5>
-    <p>
-      Clusterização e análise estatística aplicada ao transporte público urbano.
-    </p>
-    <span>QGIS · Python · Estatística</span>
-  </div>
-
-</section>
-
-<!-- PUBLICAÇÕES -->
-<section class="container py-5">
-  <h3 class="mb-4">Publicações</h3>
-
-  <div class="project-card">
-    <p>Artigo ANPET — Critérios de demanda no transporte público</p>
-    <a href="https://proceedings.science/anpet/anpet-2024/trabalhos/investigacao-dos-criterios-de-demanda-no-transporte-publico-um-estudo-de-caso-na?lang=pt-br" target="_blank">
-      Ver publicação
-    </a>
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center py-4 border-top border-secondary text-secondary">
-  Janaína Duarte · 2026
-</footer>
-
-<!-- SCRIPT ANIMAÇÃO -->
-<script>
-const counters = document.querySelectorAll('.counter');
-
-counters.forEach(counter => {
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const current = +counter.innerText;
-
-    const increment = target / 50;
-
-    if (current < target) {
-      counter.innerText = Math.ceil(current + increment);
-      setTimeout(update, 30);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  update();
-});
-</script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
